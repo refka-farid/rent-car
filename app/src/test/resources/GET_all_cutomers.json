@@ -1,0 +1,192 @@
+{
+  "request": "all_customers",
+  "count": "13",
+  "customers": {
+    "pro": [
+      {
+        "id": 190,
+        "name": "Mourad Pierre",
+        "sex": true,
+        "date": "12/12/1972",
+        "email": "m.pierrel@deezer.com",
+        "agency": []
+      },
+      {
+        "id": 191,
+        "name": "Micheal bouba",
+        "sex": true,
+        "date": "02/02/1992",
+        "email": "m.b.lol@gmail.com",
+        "id-pro": 12312,
+        "agency": [
+          "paris-17",
+          "paris-18",
+          "paris-19",
+          "paris-20"
+        ]
+      },
+      {
+        "id": 192,
+        "name": "Younes Fawzi",
+        "sex": true,
+        "id-pro": 23112,
+        "date": "08/09/1988",
+        "email": "fawzi.fawzi.fawzi@gmail.com",
+        "agency": [
+          "  paris-27",
+          "  paris-07",
+          "  paris-17",
+          "asnieres - sur-seine",
+          "paris-20 "
+        ]
+      },
+      {
+        "id": 193,
+        "name": "Ali kilani",
+        "sex": true,
+        "date": "11/11/1982",
+        "email": "ali1872@deezer.com",
+        "agency": [
+          " ",
+          " ",
+          "nanterre"
+        ]
+      },
+      {
+        "id": 194,
+        "name": "Pascal bris",
+        "sex": true,
+        "id-pro": 22312,
+        "date": "02/02/2000",
+        "email": "pb.bris@free.fr",
+        "agency": [
+          "paris-11",
+          "paris-12",
+          "paris-13",
+          "bobiny"
+        ]
+      },
+      {
+        "id": 195,
+        "name": "Noe Adem",
+        "sex": true,
+        "id-pro": 10312,
+        "date": "08/08/1972",
+        "email": "noe.1777.1111.adem@gmail.com",
+        "agency": [
+          "paris-01",
+          "paris-01",
+          "paris-02",
+          "paris-04"
+        ]
+      },
+      {
+        "id": 196,
+        "name": "Mahdi boulbeba",
+        "sex": true,
+        "date": "02/19/1982",
+        "email": "m.boulbeba@gfree.fr",
+        "id-pro": 10012,
+        "agency": [
+          "asnieres-sur-seine",
+          "",
+          "",
+          "",
+          "",
+          ""
+        ]
+      },
+      {
+        "id": 197,
+        "name": "Lamia Swilem",
+        "sex": false,
+        "date": "01/11/1982",
+        "id-pro": 18112,
+        "email": "lamia.swilem.1982@gmail.com",
+        "agency": [
+          "nanterre",
+          "bobiny",
+          "paris-01",
+          "paris-02",
+          "paris-03"
+        ]
+      },
+      {
+        "id": 202,
+        "name": "Ramla kamel",
+        "sex": false,
+        "date": "17/12/1966",
+        "id-pro": 12102,
+        "email": "lamia.swilem.1982@gmail.com",
+        "agency": [
+          "nanterre",
+          "bobiny",
+          " paris- 02 ",
+          " paris-03   "
+        ]
+      }
+    ],
+    "normal": [
+      {
+        "id": 120,
+        "name": "Kim Nazal",
+        "sex": false,
+        "date": "12/11/1971",
+        "email": " kim.nazal@yahoo.com",
+        "agency": [],
+        "adviser": {
+          "id": 10
+        }
+      },
+      {
+        "id": 122,
+        "name": "Jimmy Kevin Lamm",
+        "sex": false,
+        "date": "11/08/1981",
+        "email": "lamia.swilem.1982@gmail.com",
+        "agency": [
+          "bobiny ",
+          "paris-01",
+          "paris - 02 ",
+          "paris-03"
+        ],
+        "adviser": {
+          "id": 80
+        }
+      },
+      {
+        "id": 123,
+        "name": "Xavier Jim",
+        "sex": true,
+        "date": "22/08/1999",
+        "email": "Xavier.JIM.1982@gmail.com",
+        "agency": [
+          "Bordeau-centre ",
+          "Lille",
+          "",
+          ""
+        ],
+        "adviser": {
+          "id": 80
+        }
+      },
+      {
+        "id": 124,
+        "name": "Patricia David",
+        "sex": false,
+        "date": "22/08/1989",
+        "email": "david.pat@yahoo.ca",
+        "agency": [
+          "Bordeau-centre ",
+          "Lille",
+          "",
+          "",
+          "Paris-18"
+        ],
+        "adviser": {
+          "id": 1
+        }
+      }
+    ]
+  }
+}

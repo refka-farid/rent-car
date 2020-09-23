@@ -1,0 +1,72 @@
+[
+  {
+    "id": 100001,
+    "car": "105_FR_7755",
+    "timestamp": "",
+    "duration": 16,
+    "pricing": 99.7,
+    "currency": "€",
+    "user": 100,
+    "customer": 124
+  },
+  {
+    "id": 100002,
+    "car": "106_FR_7855",
+    "timestamp": "",
+    "duration": 11,
+    "pricing": 71.7,
+    "currency": "€",
+    "user": 300,
+    "customer": 123
+  },
+  {
+    "id": 100003,
+    "car": "107_FR_7955",
+    "timestamp": "",
+    "duration": 35,
+    "pricing": 47,
+    "currency": "€",
+    "user": 700,
+    "customer": 122
+  },
+  {
+    "id": 100004,
+    "car": "108_FR_8055",
+    "timestamp": "",
+    "duration": 6,
+    "pricing": 127.2,
+    "currency": "€",
+    "user": 888,
+    "customer": 120
+  },
+  {
+    "id": 100005,
+    "car": "109_FR_8155",
+    "timestamp": "",
+    "duration": 20,
+    "pricing": 77.7,
+    "currency": "£",
+    "user": 101,
+    "customer": 202
+  },
+  {
+    "id": 100006,
+    "car": "110_FR_8255",
+    "timestamp": "",
+    "duration": 11,
+    "pricing": 78.7,
+    "currency": "$",
+    "user": 80,
+    "customer": 197
+  },
+  {
+    "id": 100007,
+    "car": "111_FR_8355",
+    "timestamp": "",
+    "duration": 10,
+    "pricing": 177.2,
+    "currency": "€",
+    "user": 1,
+    "customer": 196
+  }
+]
