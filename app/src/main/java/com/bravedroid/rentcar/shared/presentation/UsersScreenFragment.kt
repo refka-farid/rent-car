@@ -21,5 +21,4 @@ class UsersScreenFragment(private val usersScreenViewModel: UsersScreenViewModel
             it.forEach(::println)
         }
     }
-
 }

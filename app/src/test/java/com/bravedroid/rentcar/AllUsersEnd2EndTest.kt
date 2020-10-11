@@ -8,9 +8,7 @@ import com.bravedroid.rentcar.shared.presentation.UsersScreenFragment
 import com.bravedroid.rentcar.suspend.domain.GetAllUsersUseCase
 import com.bravedroid.rentcar.suspend.domain.UserRepository
 import com.bravedroid.rentcar.suspend.infrastructure.network.ApiService
-import com.bravedroid.rentcar.suspend.infrastructure.network.UserService
 import com.bravedroid.rentcar.suspend.infrastructure.network.stub.ApiServiceInstance
-import com.bravedroid.rentcar.suspend.infrastructure.network.stub.UserServiceInstance
 import com.bravedroid.rentcar.suspend.infrastructure.persistence.UserDao
 import com.bravedroid.rentcar.suspend.infrastructure.persistence.fake.UserDaoInstance
 import com.bravedroid.rentcar.suspend.infrastructure.repository.UserRepositoryImpl
@@ -24,8 +22,6 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
 import com.bravedroid.rentcar.flow.domain.GetAllUsersUseCase as GetAllUsersUseCaseFlow
-import com.bravedroid.rentcar.flow.infrastructure.network.UserService as UserServiceFlow
-import com.bravedroid.rentcar.flow.infrastructure.network.stub.UserServiceInstance as UserServiceInstanceFlow
 import com.bravedroid.rentcar.flow.infrastructure.persistence.UserDao as UserDaoFlow
 import com.bravedroid.rentcar.flow.infrastructure.persistence.fake.UserDaoInstance as UserDaoInstanceFlow
 import com.bravedroid.rentcar.flow.infrastructure.repository.UserRepositoryImpl as UserRepositoryImplFlow

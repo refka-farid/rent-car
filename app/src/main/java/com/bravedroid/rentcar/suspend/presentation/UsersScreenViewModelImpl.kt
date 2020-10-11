@@ -22,24 +22,20 @@ class UsersScreenViewModelImpl(
         } + parentCoroutineContext + supervisorJob
 
     private val _allUsers = MutableLiveData<List<UserUiModel>>()
-   override val allUsers: LiveData<List<UserUiModel>> = _allUsers
+    override val allUsers: LiveData<List<UserUiModel>> = _allUsers
 
-   override fun loadContent() {
+    override fun loadContent() {
         launch(coroutineContext) {
-            try {
+            _allUsers.value = try {
                 getAllUsersUseCase().mapToUserUiModelList()
-                    .let {
-                        _allUsers.value = it
-                    }
-
-                supervisorJob.complete()
             } catch (e: Exception) {
                 listOf(
                     User(100, "James", 2, "PD Mahboul", "1970"),
                     User(101, "Max", 2, "PD Za3ben", "1971"),
                     User(102, "Bill", 2, "PD Mezien", "1972"),
-                )
+                ).mapToUserUiModelList()
             }
+            supervisorJob.complete()
         }
     }
 

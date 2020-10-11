@@ -18,7 +18,7 @@ class UsersScreenViewModelImpl(
     // this will be removed in a real application android , will be replaced by viewModelScope
     private val parentCoroutineContext: CoroutineContext,
     private val getAllUsersUseCase: GetAllUsersUseCase,
-) : ViewModel(), CoroutineScope , UsersScreenViewModel {
+) : ViewModel(), CoroutineScope, UsersScreenViewModel {
 
     private val supervisorJob = SupervisorJob(parentCoroutineContext[Job])
     override val coroutineContext: CoroutineContext
@@ -28,7 +28,6 @@ class UsersScreenViewModelImpl(
 
     private val _allUsers = MutableLiveData<List<UserUiModel>>()
     override val allUsers: LiveData<List<UserUiModel>> = _allUsers
-
 
     override fun loadContent() {
         // in real android application we will use this
@@ -60,7 +59,6 @@ class UsersScreenViewModelImpl(
 
     private fun List<User>.mapToUserUiModelList(): List<UserUiModel> =
         map { UserUiModel(it.id, it.name) }
-
 
     override fun onCleared() {
         super.onCleared()

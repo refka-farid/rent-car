@@ -2,10 +2,11 @@ package com.bravedroid.rentcar.flow.infrastructure.persistence
 
 import com.bravedroid.rentcar.shared.domain.User
 import com.bravedroid.rentcar.shared.infrastructure.persistence.entities.UserEntity
+import kotlinx.coroutines.flow.Flow
 
 interface UserDao {
-    suspend fun get(idNetwork: Long): UserEntity?
-    suspend fun insertOrUpdate(user: User): UserEntity
-    suspend fun delete(user: User): Boolean
+    fun get(idNetwork: Long): Flow<UserEntity?>
+    fun insertOrUpdate(user: User): Flow<UserEntity>
+    fun delete(user: User): Flow<Boolean>
 
 }

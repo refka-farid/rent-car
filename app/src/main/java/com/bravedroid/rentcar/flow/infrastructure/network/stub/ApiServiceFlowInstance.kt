@@ -7,7 +7,8 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
-class ApiServiceFlowInstance(private val getAllUsersDtoFactory: GetAllUsersDtoFactory) : ApiServiceFlow {
+class ApiServiceFlowInstance(private val getAllUsersDtoFactory: GetAllUsersDtoFactory) :
+    ApiServiceFlow {
     override fun getAllUsers(): Flow<List<UserDto>> =
         flow<List<UserDto>> {
             delay(3_000)

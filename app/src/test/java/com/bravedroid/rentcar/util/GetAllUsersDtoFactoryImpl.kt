@@ -10,14 +10,11 @@ class GetAllUsersDtoFactoryImpl : GetAllUsersDtoFactory {
     override fun create(): List<UserDto> {
         val json = this::class.java.getResource("/GET_all_users.json")!!.readText()
         val moshi = Moshi.Builder().build()
+        //val jsonAdapter = moshi.adapter(ArrayList<UserDto>::class.java)// this is impossible in java
         val mutableListOfUserDtoType =
             Types.newParameterizedType(MutableList::class.java, UserDto::class.java)
         val jsonAdapter: JsonAdapter<MutableList<UserDto>> = moshi.adapter(mutableListOfUserDtoType)
-        //val jsonAdapter = moshi.adapter(GetAllUsersDto::class.java)
         val mutableListOfUserDto = jsonAdapter.fromJson(json)
-        //val getAllUsersDto = jsonAdapter.fromJson(json)
-        //println(getAllUsersDto)
-        println(mutableListOfUserDto)
         return mutableListOfUserDto!!.toList()
     }
 }
