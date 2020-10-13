@@ -12,7 +12,6 @@ import org.junit.Test
 import org.mockito.ArgumentCaptor
 import org.mockito.Mockito.*
 
-
 @ExperimentalCoroutinesApi
 class UsersScreenFragmentTest {
     @Rule

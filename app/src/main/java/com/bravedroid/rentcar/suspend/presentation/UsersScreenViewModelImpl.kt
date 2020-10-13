@@ -47,6 +47,3 @@ class UsersScreenViewModelImpl(
         supervisorJob.cancel()
     }
 }
-
-
-

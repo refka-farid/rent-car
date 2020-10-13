@@ -38,10 +38,10 @@ dependencies {
     /////presentation layer
 
     // ViewModel
-    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0"
-
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0-beta01"
     // LiveData
-    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.3.0-beta01"
+    kapt "androidx.lifecycle:lifecycle-compiler:2.3.0-beta01"
 
     //ui
     implementation 'androidx.constraintlayout:constraintlayout:2.0.2'

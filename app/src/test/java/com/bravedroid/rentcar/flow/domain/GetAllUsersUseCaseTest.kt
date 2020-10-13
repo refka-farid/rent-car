@@ -22,21 +22,18 @@ class GetAllUsersUseCaseTest {
     }
 
     @Test
-    operator fun invoke() {
+    operator fun invoke() = runBlockingTest {
+        val user = User(100, "", 1, "some biographie", "01/09/1999")
+        val listOfUser: List<User> = listOf(
+            user.copy(200, "SIHEM"),
+            user.copy(300, "SALMA"),
+            user.copy(400, "ALMA"),
+        )
 
-        runBlockingTest {
-            val user = User(100, "", 1, "some biographie", "01/09/1999")
-            val listOfUser: List<User> = listOf(
-                user.copy(200, "SIHEM"),
-                user.copy(300, "SALMA"),
-                user.copy(400, "ALMA"),
-            )
-
-            Mockito.`when`(userRepositoryMock.getAll()).thenReturn(flowOf(listOfUser))
-            val listOfUsersResult = sut.invoke()
-            Mockito.verify(userRepositoryMock).getAll()
-            Truth.assertThat(listOfUsersResult.first()).isEqualTo(listOfUser)
-
-        }
+        Mockito.`when`(userRepositoryMock.getAll()).thenReturn(flowOf(listOfUser))
+        val listOfUsersResult = sut.invoke()
+        Mockito.verify(userRepositoryMock).getAll()
+        Truth.assertThat(listOfUsersResult.first()).isEqualTo(listOfUser)
     }
 }
+

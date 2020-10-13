@@ -5,6 +5,7 @@ import com.bravedroid.rentcar.AsynchronousStrategy.*
 import com.bravedroid.rentcar.flow.infrastructure.network.ApiServiceFlow
 import com.bravedroid.rentcar.flow.infrastructure.network.stub.ApiServiceFlowInstance
 import com.bravedroid.rentcar.shared.presentation.UsersScreenFragment
+import com.bravedroid.rentcar.shared.presentation.UsersScreenViewModel
 import com.bravedroid.rentcar.suspend.domain.GetAllUsersUseCase
 import com.bravedroid.rentcar.suspend.domain.UserRepository
 import com.bravedroid.rentcar.suspend.infrastructure.network.ApiService
@@ -13,11 +14,11 @@ import com.bravedroid.rentcar.suspend.infrastructure.persistence.UserDao
 import com.bravedroid.rentcar.suspend.infrastructure.persistence.fake.UserDaoInstance
 import com.bravedroid.rentcar.suspend.infrastructure.repository.UserRepositoryImpl
 import com.bravedroid.rentcar.suspend.presentation.UsersScreenViewModelImpl
+import com.bravedroid.rentcar.util.GetAllCustomersDtoFactoryImpl
 import com.bravedroid.rentcar.util.GetAllUsersDtoFactoryImpl
 import junitparams.JUnitParamsRunner
 import junitparams.Parameters
 import kotlinx.coroutines.runBlocking
-import org.junit.Assert
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -44,21 +45,29 @@ class AllUsersEnd2EndTest {
     @Parameters(method = "provideAsyncStrategyArgs")
     fun main(asynchronousStrategy: AsynchronousStrategy) = runBlocking {
         println("***=> START ${asynchronousStrategy.name} STRATEGY ")
-        val usersScreenViewModel =
+        val usersScreenViewModel: UsersScreenViewModel =
             when (asynchronousStrategy) {
                 REACTIVE -> {
                     val userDao: UserDaoFlow = UserDaoInstanceFlow()
-                    val getAllUsersDtoFactoryImpl=GetAllUsersDtoFactoryImpl()
-                    val apiService: ApiServiceFlow = ApiServiceFlowInstance(getAllUsersDtoFactoryImpl)
+                    val getAllUsersDtoFactoryImpl = GetAllUsersDtoFactoryImpl()
+                    val getAllCustomersDtoFactoryImpl = GetAllCustomersDtoFactoryImpl()
+                    val apiService: ApiServiceFlow = ApiServiceFlowInstance(
+                        getAllUsersDtoFactoryImpl,
+                        getAllCustomersDtoFactoryImpl
+                    )
                     val userRepository = UserRepositoryImplFlow(apiService, userDao)
                     val getAllUsersUseCase = GetAllUsersUseCaseFlow(userRepository)
                     UsersScreenViewModelFlow(coroutineContext, getAllUsersUseCase)
                 }
                 COROUTINE -> {
                     val userDao: UserDao = UserDaoInstance()
-                    val getAllUsersDtoFactoryImpl=GetAllUsersDtoFactoryImpl()
-                    val apiService: ApiService = ApiServiceInstance(getAllUsersDtoFactoryImpl)
-                    val userRepository: UserRepository = UserRepositoryImpl(apiService,userDao)
+                    val getAllUsersDtoFactoryImpl = GetAllUsersDtoFactoryImpl()
+                    val getAllCustomersDtoFactoryImpl = GetAllCustomersDtoFactoryImpl()
+                    val apiService: ApiService = ApiServiceInstance(
+                        getAllUsersDtoFactoryImpl,
+                        getAllCustomersDtoFactoryImpl
+                    )
+                    val userRepository: UserRepository = UserRepositoryImpl(apiService, userDao)
                     val getAllUsersUseCase = GetAllUsersUseCase(userRepository)
                     UsersScreenViewModelImpl(coroutineContext, getAllUsersUseCase)
                 }

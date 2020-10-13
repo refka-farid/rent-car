@@ -17,8 +17,8 @@ class UsersScreenFragment(private val usersScreenViewModel: UsersScreenViewModel
     fun showUsers() {
         usersScreenViewModel.loadContent()
         usersScreenViewModel.allUsers.observe(this) {
-            println("all users are the following : ")
-            it.forEach(::println)
+           println("all users are the following : ")
+           it.forEach(::println)
         }
     }
 }
