@@ -4,25 +4,26 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.bravedroid.rentcar.AsynchronousStrategy.*
 import com.bravedroid.rentcar.flow.infrastructure.network.ApiServiceFlow
 import com.bravedroid.rentcar.flow.infrastructure.network.stub.ApiServiceFlowInstance
-import com.bravedroid.rentcar.shared.presentation.UsersScreenFragment
-import com.bravedroid.rentcar.shared.presentation.UsersScreenViewModel
-import com.bravedroid.rentcar.suspend.domain.GetAllUsersUseCase
-import com.bravedroid.rentcar.suspend.domain.UserRepository
+import com.bravedroid.rentcar.shared.presentation.users.UsersScreenFragment
+import com.bravedroid.rentcar.shared.presentation.users.UsersScreenViewModel
+import com.bravedroid.rentcar.suspend.domain.users.GetAllUsersUseCase
+import com.bravedroid.rentcar.suspend.domain.users.UserRepository
 import com.bravedroid.rentcar.suspend.infrastructure.network.ApiService
 import com.bravedroid.rentcar.suspend.infrastructure.network.stub.ApiServiceInstance
 import com.bravedroid.rentcar.suspend.infrastructure.persistence.UserDao
 import com.bravedroid.rentcar.suspend.infrastructure.persistence.fake.UserDaoInstance
 import com.bravedroid.rentcar.suspend.infrastructure.repository.UserRepositoryImpl
 import com.bravedroid.rentcar.suspend.presentation.UsersScreenViewModelImpl
-import com.bravedroid.rentcar.util.GetAllCustomersDtoFactoryImpl
-import com.bravedroid.rentcar.util.GetAllUsersDtoFactoryImpl
+import com.bravedroid.rentcar.util.cars.GetAllCarsDtoFactoryImpl
+import com.bravedroid.rentcar.util.customers.GetAllCustomersDtoFactoryImpl
+import com.bravedroid.rentcar.util.users.GetAllUsersDtoFactoryImpl
 import junitparams.JUnitParamsRunner
 import junitparams.Parameters
 import kotlinx.coroutines.runBlocking
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import com.bravedroid.rentcar.flow.domain.GetAllUsersUseCase as GetAllUsersUseCaseFlow
+import com.bravedroid.rentcar.flow.domain.users.GetAllUsersUseCase as GetAllUsersUseCaseFlow
 import com.bravedroid.rentcar.flow.infrastructure.persistence.UserDao as UserDaoFlow
 import com.bravedroid.rentcar.flow.infrastructure.persistence.fake.UserDaoInstance as UserDaoInstanceFlow
 import com.bravedroid.rentcar.flow.infrastructure.repository.UserRepositoryImpl as UserRepositoryImplFlow
@@ -51,9 +52,11 @@ class AllUsersEnd2EndTest {
                     val userDao: UserDaoFlow = UserDaoInstanceFlow()
                     val getAllUsersDtoFactoryImpl = GetAllUsersDtoFactoryImpl()
                     val getAllCustomersDtoFactoryImpl = GetAllCustomersDtoFactoryImpl()
+                    val getAllCarsDtoFactoryImpl = GetAllCarsDtoFactoryImpl()
                     val apiService: ApiServiceFlow = ApiServiceFlowInstance(
                         getAllUsersDtoFactoryImpl,
-                        getAllCustomersDtoFactoryImpl
+                        getAllCustomersDtoFactoryImpl,
+                        getAllCarsDtoFactoryImpl,
                     )
                     val userRepository = UserRepositoryImplFlow(apiService, userDao)
                     val getAllUsersUseCase = GetAllUsersUseCaseFlow(userRepository)
@@ -63,9 +66,11 @@ class AllUsersEnd2EndTest {
                     val userDao: UserDao = UserDaoInstance()
                     val getAllUsersDtoFactoryImpl = GetAllUsersDtoFactoryImpl()
                     val getAllCustomersDtoFactoryImpl = GetAllCustomersDtoFactoryImpl()
+                    val getAllCarsDtoFactoryImpl = GetAllCarsDtoFactoryImpl()
                     val apiService: ApiService = ApiServiceInstance(
                         getAllUsersDtoFactoryImpl,
-                        getAllCustomersDtoFactoryImpl
+                        getAllCustomersDtoFactoryImpl,
+                        getAllCarsDtoFactoryImpl
                     )
                     val userRepository: UserRepository = UserRepositoryImpl(apiService, userDao)
                     val getAllUsersUseCase = GetAllUsersUseCase(userRepository)

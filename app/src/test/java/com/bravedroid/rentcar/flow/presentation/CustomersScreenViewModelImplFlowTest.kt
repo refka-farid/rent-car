@@ -2,9 +2,9 @@ package com.bravedroid.rentcar.flow.presentation
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
-import com.bravedroid.rentcar.flow.domain.GetAllCustomersUseCase
+import com.bravedroid.rentcar.flow.domain.customers.GetAllCustomersUseCase
 import com.bravedroid.rentcar.shared.domain.Customer
-import com.bravedroid.rentcar.shared.presentation.CustomerUiModel
+import com.bravedroid.rentcar.shared.presentation.customers.CustomerUiModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flow

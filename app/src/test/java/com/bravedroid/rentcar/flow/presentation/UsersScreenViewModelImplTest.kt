@@ -2,9 +2,9 @@ package com.bravedroid.rentcar.flow.presentation
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
-import com.bravedroid.rentcar.flow.domain.GetAllUsersUseCase
+import com.bravedroid.rentcar.flow.domain.users.GetAllUsersUseCase
 import com.bravedroid.rentcar.shared.domain.User
-import com.bravedroid.rentcar.shared.presentation.UserUiModel
+import com.bravedroid.rentcar.shared.presentation.users.UserUiModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.flow
@@ -16,8 +16,6 @@ import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import org.mockito.ArgumentMatchers.eq
-import org.mockito.Mockito
 import org.mockito.Mockito.*
 import kotlin.IllegalArgumentException
 import kotlin.coroutines.CoroutineContext

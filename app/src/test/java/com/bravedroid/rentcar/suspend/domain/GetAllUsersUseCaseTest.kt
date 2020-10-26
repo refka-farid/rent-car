@@ -1,8 +1,8 @@
 package com.bravedroid.rentcar.suspend.domain
 
 import com.bravedroid.rentcar.shared.domain.User
-import com.bravedroid.rentcar.shared.infrastructure.network.dto.users.DescriptionDto
-import com.bravedroid.rentcar.shared.infrastructure.network.dto.users.UserDto
+import com.bravedroid.rentcar.suspend.domain.users.GetAllUsersUseCase
+import com.bravedroid.rentcar.suspend.domain.users.UserRepository
 import com.google.common.truth.Truth
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.runBlockingTest

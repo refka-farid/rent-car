@@ -2,7 +2,7 @@ package com.bravedroid.rentcar.suspend.infrastructure.repository
 
 import com.bravedroid.rentcar.shared.domain.User
 import com.bravedroid.rentcar.shared.infrastructure.network.dto.users.UserDto
-import com.bravedroid.rentcar.suspend.domain.UserRepository
+import com.bravedroid.rentcar.suspend.domain.users.UserRepository
 import com.bravedroid.rentcar.suspend.infrastructure.network.ApiService
 import com.bravedroid.rentcar.suspend.infrastructure.persistence.UserDao
 

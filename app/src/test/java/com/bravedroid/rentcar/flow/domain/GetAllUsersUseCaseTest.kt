@@ -1,5 +1,7 @@
 package com.bravedroid.rentcar.flow.domain
 
+import com.bravedroid.rentcar.flow.domain.users.GetAllUsersUseCase
+import com.bravedroid.rentcar.flow.domain.users.UserRepository
 import com.bravedroid.rentcar.shared.domain.User
 import com.google.common.truth.Truth
 import kotlinx.coroutines.ExperimentalCoroutinesApi

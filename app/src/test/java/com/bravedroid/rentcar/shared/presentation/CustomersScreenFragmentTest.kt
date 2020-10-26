@@ -2,6 +2,9 @@ package com.bravedroid.rentcar.shared.presentation
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
+import com.bravedroid.rentcar.shared.presentation.customers.CustomerUiModel
+import com.bravedroid.rentcar.shared.presentation.customers.CustomersScreenFragment
+import com.bravedroid.rentcar.shared.presentation.customers.CustomersScreenViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.Before
 import org.junit.Rule

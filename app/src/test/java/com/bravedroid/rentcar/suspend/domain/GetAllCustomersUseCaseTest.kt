@@ -1,7 +1,8 @@
 package com.bravedroid.rentcar.suspend.domain
 
 import com.bravedroid.rentcar.shared.domain.Customer
-import com.google.common.truth.Truth
+import com.bravedroid.rentcar.suspend.domain.customers.CustomerRepository
+import com.bravedroid.rentcar.suspend.domain.customers.GetAllCustomersUseCase
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Before

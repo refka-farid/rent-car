@@ -4,10 +4,10 @@ package com.bravedroid.rentcar.flow.presentation
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.bravedroid.rentcar.flow.domain.GetAllUsersUseCase
+import com.bravedroid.rentcar.flow.domain.users.GetAllUsersUseCase
 import com.bravedroid.rentcar.shared.domain.User
-import com.bravedroid.rentcar.shared.presentation.UserUiModel
-import com.bravedroid.rentcar.shared.presentation.UsersScreenViewModel
+import com.bravedroid.rentcar.shared.presentation.users.UserUiModel
+import com.bravedroid.rentcar.shared.presentation.users.UsersScreenViewModel
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect

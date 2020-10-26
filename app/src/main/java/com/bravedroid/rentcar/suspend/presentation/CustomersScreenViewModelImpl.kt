@@ -4,9 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.bravedroid.rentcar.shared.domain.Customer
-import com.bravedroid.rentcar.shared.presentation.CustomerUiModel
-import com.bravedroid.rentcar.shared.presentation.CustomersScreenViewModel
-import com.bravedroid.rentcar.suspend.domain.GetAllCustomersUseCase
+import com.bravedroid.rentcar.shared.presentation.customers.CustomerUiModel
+import com.bravedroid.rentcar.shared.presentation.customers.CustomersScreenViewModel
+import com.bravedroid.rentcar.suspend.domain.customers.GetAllCustomersUseCase
 import kotlinx.coroutines.*
 import kotlin.coroutines.CoroutineContext
 

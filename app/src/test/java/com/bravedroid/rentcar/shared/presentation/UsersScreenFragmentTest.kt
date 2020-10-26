@@ -4,6 +4,9 @@ import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Observer
+import com.bravedroid.rentcar.shared.presentation.users.UserUiModel
+import com.bravedroid.rentcar.shared.presentation.users.UsersScreenFragment
+import com.bravedroid.rentcar.shared.presentation.users.UsersScreenViewModel
 import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import org.junit.Before

@@ -3,8 +3,8 @@ package com.bravedroid.rentcar.suspend.presentation
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import com.bravedroid.rentcar.shared.domain.Customer
-import com.bravedroid.rentcar.shared.presentation.CustomerUiModel
-import com.bravedroid.rentcar.suspend.domain.GetAllCustomersUseCase
+import com.bravedroid.rentcar.shared.presentation.customers.CustomerUiModel
+import com.bravedroid.rentcar.suspend.domain.customers.GetAllCustomersUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.TestCoroutineDispatcher

@@ -1,6 +1,6 @@
 package com.bravedroid.rentcar.flow.infrastructure.repository
 
-import com.bravedroid.rentcar.flow.domain.CustomerRepository
+import com.bravedroid.rentcar.flow.domain.customers.CustomerRepository
 import com.bravedroid.rentcar.flow.infrastructure.network.ApiServiceFlow
 import com.bravedroid.rentcar.flow.infrastructure.persistence.UserDao
 import com.bravedroid.rentcar.shared.domain.Customer
